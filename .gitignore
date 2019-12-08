@@ -1,0 +1,9 @@
+.settings/
+target/
+
+.classpath
+.project
+.java-version
+
+.DS_Store
+
