@@ -1,16 +1,26 @@
 package com.oppositarium.project;
 
+import static picocli.CommandLine.usage;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
 @Command(
     name="oppositarium-project",
-    mixinStandardHelpOptions = true
+    mixinStandardHelpOptions = true,
+    version = "1.0"
 )
 public class Application
+implements Runnable
 {
     public Application()
     {
+    }
+    
+    @Override
+    public void run()
+    {
+        usage(Application.class, System.err);
     }
     
     @Command
