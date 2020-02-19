@@ -1,9 +1,13 @@
 package com.oppositarium.project;
 
+import static java.lang.String.format;
 import static picocli.CommandLine.usage;
+
+import java.io.File;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
+import picocli.CommandLine.Parameters;
 
 @Command(
     name="oppositarium-project",
@@ -23,10 +27,20 @@ implements Runnable
         usage(Application.class, System.err);
     }
     
-    @Command
-    public void deploy()
+    @Command(
+        description="Emerge a platform."
+    )
+    public void emerge(
+        @Parameters(
+            paramLabel="platform-descriptor",
+            description="Descriptor path of the platform to be emerged."
+            
+        )
+        File platformDescriptorFile)
     {
-        System.out.println("deploy");
+        System.out.println(format(
+            "Emerging plarform configured at %s...",
+            platformDescriptorFile.getAbsolutePath()));
     }
     
     public static void main(String[] args)
