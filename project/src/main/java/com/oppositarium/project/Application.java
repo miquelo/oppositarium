@@ -34,7 +34,6 @@ public class Application implements Runnable {
             
         )
         File platformDescriptorFile) {
-        
     }
     
     public static void main(String[] args) {
