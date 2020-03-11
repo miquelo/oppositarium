@@ -1,4 +1,4 @@
 package com.oppositarium.project.platform;
 
-public interface Platform {
+public class PlatformConfig {
 }

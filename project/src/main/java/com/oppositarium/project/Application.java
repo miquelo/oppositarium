@@ -14,16 +14,13 @@ import picocli.CommandLine.Parameters;
     mixinStandardHelpOptions = true,
     version = "1.0"
 )
-public class Application
-implements Runnable
-{
-    public Application()
-    {
+public class Application implements Runnable {
+    
+    public Application() {
     }
     
     @Override
-    public void run()
-    {
+    public void run() {
         usage(Application.class, System.err);
     }
     
@@ -36,15 +33,12 @@ implements Runnable
             description="Descriptor path of the platform to be emerged."
             
         )
-        File platformDescriptorFile)
-    {
-        System.out.println(format(
-            "Emerging plarform configured at %s...",
-            platformDescriptorFile.getAbsolutePath()));
+        File platformDescriptorFile) {
+        
     }
     
-    public static void main(String[] args)
-    {
-        new CommandLine(Application.class).execute(args);
+    public static void main(String[] args) {
+        new CommandLine(Application.class)
+            .execute(args);
     }
 }
