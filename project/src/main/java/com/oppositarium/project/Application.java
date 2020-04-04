@@ -1,6 +1,5 @@
 package com.oppositarium.project;
 
-import static java.lang.String.format;
 import static picocli.CommandLine.usage;
 
 import java.io.File;
@@ -37,7 +36,6 @@ public class Application implements Runnable {
     }
     
     public static void main(String[] args) {
-        new CommandLine(Application.class)
-            .execute(args);
+        new CommandLine(Application.class).execute(args);
     }
 }
